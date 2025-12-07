@@ -365,27 +365,16 @@ a:hover {
   display: none;
  }
 
-/* #random {
+#random {
     grid-area: 1 / 1 / -1 / 2;
     width: 20vw;
     height: 10vh;
 
     background: url(pictures/loading/harp.png) left;
-    box-shadow: -4px 5px 1px 1px rgba(15, 14, 14, 0.4);
+    box-shadow: -4px 5px 1px 1px rgba(15, 14, 14, 0.2);
     
     margin: 68vh 0vw 0vh 0.1vw;
     color: transparent;
-  } */
-
-   #random {
-    grid-area: 1 / 1 / -2 / 2;
-    width: 14vw;
-    height: 10vh;
-    margin: 68vh 0vw 0vh 0.1vw;
-
-    justify-self: center;
-    z-index: 10;
-    opacity: 90%;
   }
 
 }
