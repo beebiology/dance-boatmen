@@ -330,24 +330,58 @@ a:hover {
 /* MEDIA QUERIES */
 @media only screen and (max-width: 700px) {
 
-  /* .room img, .room h1, .room h2, .theater h1, .journal img, .journal h1, .journal div, .journal button, #click2, .video {
-    display: none;
-  }
-
-  .room h3, .theater h3 {
-    display: flex;
-    font-size: 1.2rem;
-  } */
-
   .splash h1 {
     display: none;
   }
 
-  .theater h7 {
+  /* DASHBOARD MEDIA QUERIES */
+    .room h1, .room audio {
+    display: none;
+  }
+  
+  .room {
+  grid-template: 1fr 1fr 1fr;
+  height: 100vh;
+  max-width: 100vw;
+  overflow: scroll;
+  max-width: 100vw;
+}
+
+.scenes {
+  grid-row: 1 / 2;
+  align-self: center;
+}
+
+.people {
+  grid-row: 2 / 3;
+  align-self: center;
+}
+
+.horizontals {
+  grid-row: 3 / 4;
+  max-width: 60vw;
+}
+
+.scenes, .people, .horizontals {
+height: 100%;
+width: 100%;
+margin: 2vh 0vh 2vh 0vh;
+}
+
+.room h2 {
+  grid-row: 4 / -1;
+}
+
+  /* PARTYGIRL MEDIA QUERIES */
+
+    .theater h7, .theater h1, .video, .theater #click2{
     display: none;
   }
 
-  /* PARTYGIRL MEDIA QUERIES */
+    .theater h3 {
+    display: flex;
+    font-size: 1.2rem;
+  }
 
   /* JOURNAL MEDIA QUERIES */
 
@@ -361,7 +395,7 @@ a:hover {
   padding: 0.25rem 0.1rem 1.5rem 0.2rem;
 }
 
- #click2 {
+ .journal #click2 {
   display: none;
  }
 
