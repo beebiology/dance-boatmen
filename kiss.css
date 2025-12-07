@@ -336,7 +336,8 @@ a:hover {
   .room {
   grid-template: 1fr 1fr 1fr / 1fr;
   width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   }
 
   .all {
