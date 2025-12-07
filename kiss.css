@@ -341,7 +341,7 @@ a:hover {
   }
 
   .all {
-  background: url("./pictures/horizontals/190,000 miles.jpeg") -50vh -30vw;
+  background: transparent;
 }
 
 .scenes {
@@ -358,9 +358,13 @@ a:hover {
 }
 
 .scenes, .room, .people {
-  height: 80vh;
+  height: 100vh;
   width: 100%;
   transform: none;
+}
+
+.room img {
+  height: 77vh;
 }
 
   /* PARTYGIRL MEDIA QUERIES */
