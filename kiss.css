@@ -184,7 +184,7 @@ a:hover {
 
 .video {
   grid-area: 1 / 2 / 2 / 3;
-  justify-self: center;
+  justify-self: end;
 
   max-height: 75vh;
 }
@@ -364,7 +364,7 @@ a:hover {
   display: none;
  }
 
-#random {
+/* #random {
     grid-area: 1 / 1 / -1 / 2;
     width: 20vw;
     height: 10vh;
@@ -374,6 +374,18 @@ a:hover {
     
     margin: 68vh 0vw 0vh 0.1vw;
     color: transparent;
+  } */
+
+   #random {
+    grid-area: 1 / 1 / -2 / 2;
+    width: 14vw;
+    height: 10vh;
+    margin: 68vh 0vw 0vh 0.1vw;
+    color: transparent;
+
+    justify-self: center;
+    z-index: 10;
+    opacity: 90%;
   }
 
 }
