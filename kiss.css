@@ -184,9 +184,10 @@ a:hover {
 
 .video {
   grid-area: 1 / 2 / 2 / 3;
-  justify-self: end;
+  justify-self: center;
 
   max-height: 75vh;
+  transform: translateX(2vw);
 }
 
 .theater h7 {
@@ -381,7 +382,6 @@ a:hover {
     width: 14vw;
     height: 10vh;
     margin: 68vh 0vw 0vh 0.1vw;
-    color: transparent;
 
     justify-self: center;
     z-index: 10;
