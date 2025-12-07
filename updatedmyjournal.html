@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./killswitch.css" rel="stylesheet">
+    <link href="./kiss.css" rel="stylesheet" >
+
+    <title>green growing days</title>
+    <link rel="icon" href="pictures/loading/cove.ico" type="image/x-icon">
+  </head>
+
+ <body>
+    <div class="splash">
+      <img class="journalload" src="pictures/loading/fisheyethree.jpg">
+      <h1>(this leaves your past unchanged)</h1>
+    </div>
+
+    <div class="journal">
+      <h1 class="banner"></h1>
+
+      <div id="field">Welcome to my life. Please remove your shoes, and don't touch that. Here, have a seat. That seat. Please have that specific seat. Great. Just make yourself comfortable, and when will you be leaving?</div>
+      <button id="random">I'm feeling lucky.</button>
+      <a href="dashboard.html" id="click2"></a>
+
+      <img class="pills" >
+      <h3>TURN YOUR PHONE SIDEWAYS</h3>
+    </div>
+
+
+ </body>
+</html>
+
+<script>
+const entries = [
+  "The seaweed lies like the backs of weeping women's heads, and I'm standing with nature in her new shoes. We cross the suction of the cold, damp sand and laugh at something I forget. I kiss a parting in her hair, ask for her trust back.\n\nNow nature shows me what she's painted, draws her tarot, changes clothes. Now nature goes to bed, and has a dream she will tell me all about tomorrow.",
+  "And when I play a song, unconsciously I hope she's listening. And when I write, I hope she'll peek. Not even knowing my own hope until I hear her coming nearer.",
+  "You set a timer for a photo and come running to be in it. Everything seems especially brief and delicate today, like we are on the brink of significant change.\n\nI feel compassion for you. I feel compassion for the uncrushed moss and weightless morning. Your fuzzy ear this afternoon, the darkening cove. I am alive for a reason. I was given this life to take care of.",
+  "The binding of my journal is coming loose and everything I love is blowing away.\n\nShe's standing barefoot in front of the garage with her clipping of a flower, and this too I cannot keep. I am already forgetting.\n\nI start to cry if I sing about love.",
+  "It might still be. The secret hope you cherish might still be.",
+  "Time and fate come here even as we speak. We stand in the dead grass, watching the tugboats bring in a barge. Fate and time will soon be here.\n\nThis is it. Someone is coming to break up my party. My moment is going to pass.",
+  "I need OUT of this room, I need out of this house, I need off of this street, I need out of this town. I want out of this county, country and continent. This hemisphere, this mortal coil, or AT LEAST this one bad mood.",
+  "I walk along the beach of my life, amazed at the sparkling traces that yesterday's tide left behind.\n\nSighing, as if it will never come back.",
+  "It's the present moment, I say.\nHow did you know?? she says, jumping up.",
+  "I am not my own property to do with as I please, or deal with as harshly as I wish to. To rake over the coals like this.\n\nI am not completely my own property. I belong to creation. I belong to other people.",
+  "I want to be sober... deeply, deeply (mostly) sober. Lovely, dark and deeply sober as a dream of a field of grass. And by sober, I mean drunk.",
+  "Life is an unforgettable gift and love is urgent and crucial but so what do I do about it? Today? Make Lemoncello? Write words on paper? What?",
+  "After all this time, how can the same person keep popping back out of bed? Him again! Out of a long blank sleep.\n\nHow... unless he's written down somewhere in my nerves and flesh and waits there to set back about his familiar work, weaving his continuum.",
+  "If I hold a pen over paper then an eye, a face is what I will begin to draw. A face looking back at me. My own reflection.",
+  "I live in a cage full of sleeping tigers but there is no cage and there are no tigers. I live in a cage with no tigers inside and there is no cage, and I am free.",
+  "Maybe he is just a body sitting in the stairwell now, on the pin of another moment in time, playing a guitar.\n\nMaybe he no longer belongs to me, or falls under my control. Maybe it's all over and he is free.",
+  "I climbed up this tree to get away from everyone. Now I can't get down and it's getting dark and the people are going inside.\n\nI begin to panic, I realize my mistake. I feel a soft, warm hand on mine.",
+  "I write this in code so only I'll understand.\n\nI read it over in fits and starts by the faint match-light of my own attention, which is very faint and fickle indeed, expiring down the page.",
+  "I want something I can hold onto. Your hand under the low branches?\n\nI want something I can keep. You close under the darkening sky?\n\nThen there's the promise to each other that we've never made, that we keep every day.",
+  "Me, I'm very much in the closet. I mean as a human being, just about the fact that I exist.\n\nWatch as I fold myself up like a piece of paper, as many times as I can. Actually, please don't watch.",
+  "I am a stress-based lifeform and these days are long, lonely and bizarre... but gradually I am clawing my way out of the grave of myself.\n\nStepping up the steep dirt hill behind the Jewish cemetery, emerging up among the graves. In a grey breeze, early spring",
+  "At first you were frozen in the camera of my mind, and your straw hat cast a shadow over your yellow-green eyes.\n\nThen you asked me to come closer and wiped your nose on my shirt.",
+  "blank mind\n\n\nthe dogwood petals are falling down.\n\nblank mind\n\n\nthe dogwood petals are falling.",
+  "She formed one morning like a dewdrop on life's leaf. She shows the sky a tiny sky.\n\nMy don't-leave, my please-be-mine.",
+  "Hidden in the breath you are breathing. Hidden in the twitch of your pulse. Hidden in the thumbprint on the screen: it's your life.",
+  "What did the bored aeronautical engineering student shout out during the lecture?\n\nboieng!",
+  "Maybe you'll like this. I heard it on the radio yesterday: ''I hate having insomnia, but there is an upside... only three more sleeps until Christmas!''\n\nIf you're laughing, I wish I could hear it. Until then.",
+  "I'm here now. I hear the mourning dove mourning. The poppies are alarmingly red.\n\nIt's almost embarrassing how nakedly the morning lounges across the grass.\n\nBut where did that hummingbird go? Already, it's disappearing into memory.",
+  "Under the churchroof of the branches and rain. Crawled on by green insects, half conscious.\n\nI am in progress, I am not over. I am a continuing story.",
+  "I am a creature of total ingratitude. I eat my experience for breakfast, without a word of thanks.\n\nI wield my sense of inadequacy like a weapon against every other person in the world.\n\nWhy?? Why every morning do I keep dressing myself in this tired old drag? In this awful, gaudy costume of myself at my unhappiest?",
+  "Bells are ringing, drops of water are falling from my body. I hear children playing, who knows where. The distant past? The recent future?\n\nUsually I'm all full of talk, useless talk. But now my experience is running ahead of me laughing, and I'm letting it go.\n\nWhat am I, on drugs? Yes!",
+  "On a blue morning across new, green grass, we carried our weight very easily. Like it was the smallest thing. Like you could forget it in your pocket.\n\nThen with a word it grew suddenly heavy, or we grew suddenly weak. Now it's all we can talk about.",
+  "I would like to be a part of whatever makes the morning bright. Whatever lifts the trees up, and sits the geese down on the field, ceramic-like.\n\nWhatever prepares the morning to be bright.",
+  "Without our movement there is no movement. Without our noise, there is no noise. The high, dry pines, the sky and wet, green fields are as still as if in deep thought,\nwithout thinking.",
+  "The moldy, gray graves behind me. The clean, white cross ahead.\n\nMy life will be my life's work, from now on.",
+  "I don't like confined spaces. So it's unlucky that I'm living out a life sentence inside my tiny skull.\n\nJesus, let me out of the cramped house of thought. The room, the closet, the shoebox, the shoe.",
+  "I am avoiding my life like someone I don't want to talk to. Like a serious conversation I don't want to have.\n\nMy new to-do list: don't",
+  "I see you cooking in our kitchen, and the window is clouded over with steam. Your hair hangs around your ears; your eyelashes blink down at a recipe. It's like the past is being remembered in front of me, and the future foreseen.\n\nIt's like my whole life is converging here. In one moment, which cannot pass. Which will never be.",
+  "I am moving through an infinite series of rooms. I experience life one frame at a time. I cut it as fine as garlic. My moment is smaller than anyone's.",
+  "It's like I am carrying a small, very hot mug of coffee all the time, trying to keep it from spilling.\n\nIt's like I always have the kettle on in the other room.", 
+  "Providence, RI\n\nYou put your old toys back in their box and fold your first attempts away\n\nat molding up a dream of yours from the world's inadequate clay.",
+  "I am a shore for waves of sadness and waves of rage. I am a shore for feeling's every sighing wave.\n\nI am drowning, I am pulling me out. I am drowning, I am pulling me out.",
+  "I am a shore for the ocean of her breathing, as she lies against my chest. I rely on her.\n\nWhen I need a drinking cup, she cups her hands and I rely on her.",
+  "I can't believe I feel this light on my feet. Like I lost my winter's weight. Like my shadow's been unsown from me. Like a difficult member of my family died.",
+  "How to have meaningful experience? How to derive meaning from daily life?\n\nI forgor 💀",
+  "I watch the surface of the stream, to see a sailing yellow leaf\n\nbeing borne away from me (to ensure that time is passing).",
+  "The fog over the hills is deeply touching, like someone's gone out of their way and done something nice just for me.\n\nNow excuse me, Lord, I need to go pursue a material thing.",
+  "Yesterday, for a moment, I captured my dream. Is this the happiest I've ever been?\n\nThis experience has changed my life forever. For once, no bullshit. This changes the future.",
+  "Not every word you think is worth writing down. Some things are for singing about!",
+  "If I hear the floorboards creaking at the door, I hope you'll come inside. And if I leave you here alone, what will I return to find?\n\nJam footprints all over the walls!",
+];
+
+document.getElementById("random").addEventListener("click", () => {
+  const index = Math.floor(Math.random() * entries.length);
+  document.getElementById("field").textContent = entries[index];
+});
+</script>
