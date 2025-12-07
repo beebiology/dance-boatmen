@@ -328,47 +328,71 @@ a:hover {
   }
 
 /* DASHBOARD MEDIA QUERIES */
-@media only screen and (max-width: 700px) {
-  .splash h1, .room h1, .room audio, .horizontals {
+@media only screen and (max-width: 650px) {
+  .splash h1, .room h1, .room audio, .horizontals, #click2 {
     display: none;
   }
   
   .room {
-  grid-template: 9fr 2fr 9fr / 1fr;
-  background: url("./pictures/horizontals/190,000 miles.jpeg") 0vh -9vh;
-  background-size:cover;
+  grid-template: 1fr 1fr 1fr / 1fr;
+  }
+
+  .all {
+  background: url("./pictures/horizontals/190,000 miles.jpeg") -50vh -30vw;
 }
 
 .scenes {
   grid-area: 1 / 1 / 2 / 2;
-  height: 80vh;
-  transform: none;
+}
+
+.room h2 {
+  grid-area: 2 / 1 / 3 / 2;
+  margin: 3vh 0vh 1vh 2vw;
 }
 
 .people {
   grid-area: 3 / 1 / 4 / 2;
-  height: 80vh;
-  transform: none;
 }
 
-.room h2 {
-  grid-area: 2 / 1 / 3 / 1;
-  margin: 3vh 2vw 0vh 2vw;
+.scenes, .room, .people {
+  height: 100vh;
+  width: 100%;
+  transform: none;
 }
 
   /* PARTYGIRL MEDIA QUERIES */
 
-  .theater h7, .theater h1, .theater h3, .video, .theater #click2{
-    display: none;
+  .theater {
+    overflow: scroll;
   }
 
-  .theater h3 {
-    display: grid;
-    font-size: 0.75rem;
-  }
+  .video {
+  grid-area: 1 / 1 / 2 / -1;
+  justify-self: center;
+
+  max-width: 100vw;
+  transform: none;
+}
+
+.theater h7 {
+  grid-area: 2 / 1 / -1 / -1;
+  justify-self: start;
+  font-size: 0.6rem;
+  
+
+  line-height: 18vh;
+  margin-bottom: 3vh;
+}
+
+#two, #three, #four, #six, #seven, #eight, #ten {
+  padding-right: 26vw;
+}
+
+#one, #six {
+  margin-left: -0.3vw;
+}
 
   /* JOURNAL MEDIA QUERIES */
-
   .journal {
     grid: 100vh / 30vw 70vw;
   }
@@ -379,21 +403,17 @@ a:hover {
   padding: 0.25rem 0.1rem 1.5rem 0.2rem;
 }
 
- .journal #click2 {
-  display: none;
- }
-
 #random {
     grid-area: 1 / 1 / -1 / 2;
     width: 20vw;
     height: 10vh;
 
-    background: url(pictures/loading/harp.png) left;
+    background: url(pictures/30more/june.jpg) -32vh -2vh;
     margin: 68vh 0vw 0vh 0.1vw;
 
     color: transparent;
     border-radius: 10px 100px;
-    box-shadow: -5px 5px 2px 1px rgba(68, 67, 67, 0.4);
+    z-index: 5;
   }
 
 }
