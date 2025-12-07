@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./killswitch.css" rel="stylesheet">
+        <link href="./kiss.css" rel="stylesheet" >
+
+        <title>365partygirl</title>
+        <link rel="icon" href="pictures/loading/cove.ico" type="image/x-icon">
+    </head>
+    <body>
+        <div class="splash">
+            <img src="pictures/loading/fisheeyetwo.jpg">
+            <h1>(this leaves your past unchagned)</h1>
+        </div>
+
+      <div class="theater">
+        <video id="video" class="video" src="videos/9. Merry Christmas!.mp4" controls></video>
+
+        <h7><a id="one">2016</a><a id="two"></a><a id="three"></a><br><a id="four"></a><a id="five">2020</a><br>
+          <a id="six"></a><a id="seven"></a><a id="eight"></a><br><a id="nine">2024</a><a id="ten"></a>
+          <a href="dashboard.html" id="click2"></a>
+        </h7>
+
+        <h3>TURN YOUR PHONE SIDEWAYS</h3>
+        </div>
+
+    </body>
+</html>
+
+<!-- DIRECT CHOICE -->
+<script>
+const target_element = document.getElementById("video");
+
+const choice_list = {
+  one:  "videos/1. Kid Emma.mp4",
+  two:  "videos/2. 21 Emma.mp4",
+  three:"videos/3. Emma, 22, brings news to the church.mp4",
+  four: "videos/4. forever emma.mp4",
+  five: "videos/5. Hey Emma.mp4",
+  six:  "videos/6. Cross-Country Emma.mp4",
+  seven:"videos/7. Emma drinks White Russians (Yes, Plural!).mp4",
+  eight:"videos/8. Emma Western Teleport.mp4",
+  nine: "videos/9. Merry Christmas!.mp4",
+  ten:  "videos/10. The Long Dance.mp4"
+};
+
+for (let number in choice_list) {
+  const corresponding_id = document.getElementById(number);
+
+  corresponding_id.addEventListener("click", () => {
+    target_element.src = choice_list[number];
+  });
+}
+</script>

@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./killswitch.css" rel="stylesheet">
+        <link href="./kiss.css" rel="stylesheet" >
+
+        <title>dashboard</title>
+        <link rel="icon" href="pictures/loading/cove.ico" type="image/x-icon">
+    </head>
+
+    <body>
+        <div class="splash">
+            <img src="pictures/loading/fisheyeone.jpg">
+            <h1>(this changes your future)</h1>
+        </div>
+
+      <div class="room">
+        <img id="cycleLeft" class="scenes fade" src="pictures/scenes/bananaphone.jpg" loading="lazy">
+        <img id="cycleCenter" class="people fade" src="pictures/people/monk.jpg" loading="lazy">
+        <img id="cycleWide" class="horizontals fade" src="pictures/horizontals/frogs.jpg" loading="lazy">
+
+        <h2> <a href="365partygirl.html">videos</a>
+          &nbsp;&nbsp;&nbsp;<a href="updatedmyjournal.html">journals</a>  </h2>
+          <audio controls>
+            <source src="videos/the boatman's dance/audio.mp3" type="audio/mpeg"> 
+                </audio> 
+
+        <h3>TURN YOUR PHONE SIDEWAYS</h3>
+        </div>
+
+    </body>
+</html>
+
+<script>
+  function cycleImage(imgElement, imageList) {
+  imgElement.addEventListener("click", () => {
+    index = Math.floor(Math.random() * imageList.length);
+    imgElement.src = imageList[index];
+  });
+}
+
+  function randomImage(imgElement, imageList) {
+  const index = Math.floor(Math.random() * imageList.length);
+  imgElement.src = imageList[index];
+}
+
+const leftImages =   ["pictures/scenes/bananaphone.jpg", "pictures/scenes/assaultandbattery.jpg", "pictures/scenes/bathtub.jpg", "pictures/people/stallone.jpg",
+"pictures/scenes/fifty four.jpg", "pictures/scenes/hebrews.jpg", "pictures/scenes/northcarolina.jpg", "pictures/people/swimsuit.jpg", 
+"pictures/people/sleeping.jpg", "pictures/people/sablefable.jpeg","pictures/scenes/polaroid.jpg", "pictures/people/myself.jpg", 
+"pictures/scenes/snowbound.jpg",  "pictures/scenes/cloveslake.jpg", "pictures/scenes/ferryterminal.jpg", "pictures/people/hopshoppe.jpg", 
+"pictures/people/alaindelon.jpg", "pictures/30more/journal.jpg", "pictures/30more/june.jpg", "pictures/people/selfieagain.jpg", 
+"pictures/scenes/sunflower.jpg", "pictures/scenes/goodbyeseaflox.jpeg", "pictures/30more/cove.jpg"]
+// 22
+
+const leftElement = document.getElementById("cycleLeft");
+
+cycleImage(leftElement, leftImages);
+randomImage(leftElement, leftImages);
+
+const centerImages = ["pictures/people/pier76.jpeg", "pictures/scenes/seafloxback.jpg", "pictures/scenes/basil.jpg", "pictures/people/noodlesselfie.jpg", 
+"pictures/scenes/sticker.jpg", "pictures/scenes/thecove.jpg", "pictures/people/luigi.jpg", "pictures/30more/tryonpark.jpg",
+"pictures/scenes/flower.jpg", "pictures/people/gabopentin.jpg", "pictures/scenes/pasta.jpg", "pictures/30more/horizontals/photobooth.jpeg",
+"pictures/people/radiocitymusichall.jpg", "pictures/people/redpipe.jpg", "pictures/scenes/whiskeydamage.jpg", "pictures/people/rowley.jpg", 
+"pictures/30more/luigitwo.jpg", "pictures/30more/deer.jpg", "pictures/people/scorpionbowl.jpeg", "pictures/people/raincoat.jpeg",
+"pictures/30more/nappingagain.jpg","pictures/people/badboy.jpeg", "pictures/scenes/harvardave.jpeg", "pictures/people/monk.jpg",
+"pictures/people/tarotagain.jpg", "pictures/people/homeoffice.jpg", "pictures/30more/verazanno.jpg", "pictures/scenes/snugharbor.jpg"]
+// 28
+
+const centerElement = document.getElementById("cycleCenter");
+
+cycleImage(centerElement, centerImages);
+randomImage(centerElement, centerImages);
+
+let wideImages =  ["pictures/horizontals/frogs.jpg", "pictures/horizontals/scrape.jpg", "pictures/horizontals/dryingrack.jpg", 
+"pictures/horizontals/bookshelves.jpeg", "pictures/horizontals/seafloxfront.jpg", "pictures/30more/horizontals/anniversary.jpg", 
+"pictures/30more/horizontals/onedirection.jpeg", "pictures/30more/horizontals/sandals.jpeg", "pictures/horizontals/produce.jpg", 
+"pictures/scenes/bottleredemption.jpg"]
+// 10
+
+const wideElement = document.getElementById("cycleWide")
+
+cycleImage (wideElement, wideImages);
+randomImage (wideElement, wideImages);
+
+</script>

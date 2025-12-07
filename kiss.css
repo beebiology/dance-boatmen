@@ -1,0 +1,350 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family:'Gill Sans', Calibri, sans-serif;
+  font-weight: 300; /* normal, 700 is bold */
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18vh; 
+}
+
+a {
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.9);
+  transition: font-size 1s ease-out;
+  cursor: pointer;
+}
+
+a:hover {
+  font-size: 0.85em;
+}
+
+.room {
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+  height: 100vh;
+  max-width: 100vw;
+  background: url("./pictures/horizontals/190,000 miles.jpeg") left;
+  background-size: fill;
+}
+
+.scenes {
+  grid-area: 1 / 1 / span 2 / 2;
+  align-self: center;
+}
+
+.people {
+  grid-area: 1 / 2 / span 2 / 3;
+  align-self: center;
+  justify-self: end;
+}
+
+.horizontals {
+  grid-area: 1 / 3 / span 2 / span 1;
+  max-width: 60vw;
+  justify-self: end;
+}
+
+.scenes, .people, .horizontals {
+  box-shadow: 2px 2px 10px rgba(13, 12, 12, 0.8);
+  height: 89vh;
+  transform: scale(0.90) translateY(4vh);
+  
+  filter: brightness(95%);
+  transition: filter 2s linear;
+}
+
+.horizontals {
+  transform: scale(0.60) translateY(-16.1vh) translateX(-22vh);
+}
+
+.people:hover, .scenes:hover, .horizontals:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+}
+
+.room audio {
+  grid-area: 2 / 3 / span 2 / span 1;
+  justify-self: center;
+  align-self: start;
+  transform: scale(0.8) translateY(10vh);
+
+  opacity: 5%;
+}
+
+.room audio:hover {
+  cursor: pointer;
+  opacity: 100%;
+}
+
+/* SCROLLING TEXT */
+.room h2, .theater h1 {
+  width: 120%;
+  margin: 2vh;
+  margin-left: 4vw;
+}
+
+.room h2, .theater h2 {
+  font-size: 0.44em;
+  grid-area: 3 / 1 / span 1 / span 1;
+  animation: scroll-text 3.5s;
+  animation-fill-mode: forwards;
+}
+.room h3, .theater h3, .journal h3 {
+  display: none;
+}
+
+@keyframes scroll-text {
+  0% {transform: translateX(-80%) translateY(-2vh);}
+  60% {transform: translateX(-70%) translateY(-2vh);}
+  100% {transform: translateY(-2vh);}
+}
+
+
+/* Updated my Journal */
+  .journal {
+    display: grid;
+    grid: 80vh 20vh / 44vw 36vw 20vw;
+  }
+
+  #field {
+  grid-area: 1 / 2 / 2 / 3;
+  font-size: 0.28rem;
+
+  height: 100vh;
+  overflow: scroll;
+
+  width: 100%;
+  padding: 0.25rem 0.5rem 0rem 0.3rem;
+  white-space: pre-wrap;
+  z-index: 9;
+  background: url("pictures/loading/harp.png")top;
+}
+
+  #random {
+    grid-area: 2 / 3 / 3 / 4;
+    width: 14vw;
+    height: 10vh;
+    margin: 2vh 18vw 0vh 0vw;
+
+    font-size: 0.16rem;
+    cursor: pointer;
+
+    justify-self: center;
+    z-index: 10;
+    opacity: 90%;
+  }
+
+  #random:hover {
+    opacity: 100%;
+    transform: scale(1.01);
+  }
+
+ .pills {
+  grid-area: 1 / 2 / -1 / 4;
+  width: 100%;
+  height: 100%;
+  background: url("pictures/30more/journal\ copy.jpg");
+ }
+
+ .banner {
+  grid-area: 1 / 1 / -1 / 3;
+  background: url("pictures/30more/journalcropped.jpg");
+ }
+
+ .journal #click2 {
+  position: fixed;
+  left: -2vw;
+  bottom: -2.5vh;
+  width: 20%;
+  opacity: 60%;
+
+  cursor: pointer;
+  z-index: 10;
+ }
+
+
+/* 365partygirl (videos) */
+.theater {
+  height: 100vh;
+  width: 100vw;
+
+  display: grid;
+  grid-template: 1fr 1fr/ 30fr 70fr;
+
+  overflow: hidden;
+  animation: scroll 100s alternate-reverse infinite;
+  background: url("pictures/30more/sunflowercropped.jpg") bottom;
+}
+
+.video {
+  grid-area: 1 / 2 / 2 / 3;
+  justify-self: center;
+
+  max-height: 75vh;
+}
+
+.theater h7 {
+  grid-area: 1 / 1 / -1 / 2;
+  justify-self: end;
+
+  font-size: 0.6rem;
+  line-height: 20vh;
+}
+
+.video:hover {
+  cursor: pointer;
+}
+
+.theater a {
+  border: 1px solid white;
+  padding: 3vw;
+  cursor: pointer;
+}
+
+
+/* SPLASH DAMAGE*/
+.splash {
+  position: fixed;
+  inset: 0;
+
+  /* this should be "flex" */
+  display: flex; 
+  justify-content: start;
+  align-items: center;
+  background: black;
+  width: 100vw;
+
+  z-index: 1000;
+  animation: reveal 600ms ease-in-out forwards 2s;
+}
+
+.splash img {
+  height: 65vh;
+  margin-left: 0vw;
+}
+
+.splash h1 {
+  font-size: 0.3em;
+  letter-spacing: 1.8vh;
+  padding-left: 10vh;
+
+  color: rgb(219, 218, 218);
+}
+
+@keyframes reveal {
+  0% {opacity: 1;}
+  100% {opacity: 0; visibility: hidden;}
+}
+
+.journalload {
+  position: fixed;
+  right: 0;
+}
+
+/* MINIMIZE ME LIKE THE IMPACT OF FOSSIL FUELS ON THE ENVIRONMENT */
+  #click {
+  font-size: 0.14rem;
+  width: 12vw;
+  height: 7vh;
+
+  margin-left: 0.7vw;
+  opacity: 90%;
+  cursor: pointer;
+  }
+
+  #click2 {
+  position: fixed;
+  right: 12vw;
+  bottom: 5vh;
+
+  padding: 5vh 8vh 5vh 8vh;
+  opacity: 80%;
+
+  background: url("pictures/loading/fisheyeone.jpg") right;
+  background-size: cover;
+
+  }
+
+  .theater #click2 {
+  position: fixed;
+  right: -3vw;
+  bottom: -3vh;
+  width: 22%;
+
+  cursor: pointer;
+  z-index: 10;
+
+  }
+
+  #click:hover, #click2:hover {
+    opacity: 100%;
+  } #one {
+  background: url("videos/thumbnails/1.png") center;
+  background-size: cover;
+  margin-left: 1vw;
+  } #two {
+  background: url("videos/thumbnails/2.png") center;
+  background-size: cover;
+  } #three {
+  background: url("videos/thumbnails/3.png") right;
+  background-size: cover;
+  margin-right: 1vw;
+  } #four {
+  background: url("videos/thumbnails/4.png") right;
+  background-size: cover;
+  } #five {
+  background: url("videos/thumbnails/5.png") center;
+  background-size: cover;
+  padding-left: 3vw;
+  } #six {
+  background: url("videos/thumbnails/6.png") center;
+  background-size: cover;
+  padding-left: 10vw;
+  margin-left: 1vw;
+  } #seven {
+  background: url("videos/thumbnails/7.png") center;
+  background-size: cover;
+  padding-left: 4vw;
+  min-width: 10vw;
+  } #eight {
+  background: url("videos/thumbnails/8.png") center;
+  background-size: cover;
+  padding-left: 3.2vw;
+  } #nine {
+  background: url("videos/thumbnails/9.png") center;
+  background-size: cover;
+  padding-left: 3vw;
+  } #ten {
+  background: url("videos/thumbnails/10.png") center;
+  background-size: cover;
+  padding-left: 8vw;
+  }
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 700px) {
+
+  .room img, .room h1, .room h2, .theater h1, .journal img, .journal h1, .journal div, .journal button, #click2, .video {
+    display: none;
+  }
+
+  .room h3, .theater h3, .journal h3{
+    display: flex;
+    font-size: 1.2rem;
+  }
+
+  .splash img {
+    height: 60vh;
+    padding-left: 0vw;
+  }
+
+  .theater h7 {
+    display: none;
+  }
+
+  .journal {
+    background: url("pictures/loading/harp.png") center;
+  }
+
+}
