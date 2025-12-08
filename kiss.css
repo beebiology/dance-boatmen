@@ -99,7 +99,7 @@ a:hover {
   align-self: end;
   margin-bottom: 1.5vh;
 
-  animation: scroll-text 4s;
+  animation: scroll-text 4.5s;
   animation-fill-mode: forwards;
 }
 
