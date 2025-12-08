@@ -5,7 +5,7 @@
 html {
   font-family:'Gill Sans', Calibri, sans-serif;
   font-weight: 300; /* normal, 700 is bold */
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 254, 0.9);
   font-size: 18vh; 
 }
 
@@ -47,15 +47,15 @@ a:hover {
   align-self: start;
 
   justify-self: start;
-  margin-left: 1vw;
+  margin-left: 2vw;
 
   z-index: 2;
 }
 
 .scenes, .people, .horizontals {
   box-shadow: 2px 2px 10px rgba(13, 12, 12, 0.8);
-  max-height: 88vh;
-  transform: translateY(3.5vh);
+  max-height: 86vh;
+  transform: translateY(4vh);
   
   filter: brightness(95%);
   transition: filter 2s linear;
@@ -97,7 +97,7 @@ a:hover {
   font-size: 0.38em;
   grid-area: 2 / 1 / span 1 / span 1;
   align-self: end;
-  margin-bottom: 1.5vh;
+  margin-bottom: 2.2vh;
 
   animation: scroll-text 4.5s;
   animation-fill-mode: forwards;
