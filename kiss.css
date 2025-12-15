@@ -20,7 +20,7 @@ a:hover {
   font-size: 0.85em;
 }
 
-/* SCENES, PEOPLE AND HORIZONTALS of THE MAIN PAGE */
+/* SCENES, PEOPLE AND HORIZONTALS of MAIN PAGE */
 .room {
   display: grid;
   grid-template: 1fr 1fr / 2fr 2fr 3fr;
