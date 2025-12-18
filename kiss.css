@@ -109,7 +109,7 @@ a:hover {
 
 @keyframes scroll-text {
   0% {transform: translateX(-100%);}
-  50% {transform: translateX(-80%);}
+  50% {transform: translateX(-90%);}
   100% {transform: translateX(2vw);}
 }
 
@@ -258,6 +258,134 @@ a:hover {
   right: 0;
 }
 
+.splash img {
+  height: 65vh;
+  margin-left: 0vw;
+}
+
+.bluesky {
+  position: fixed;
+  inset: 0;
+
+  display: flex; 
+  justify-content: start;
+  align-items: center;
+  background: url("pictures/scenes/snowbound cropped.jpg") right;
+  background-size: cover;
+  width: 100vw;
+
+  font-size: 0.3em;
+  letter-spacing: 1.8vh;
+  padding-left: 10vh;
+
+  z-index: 1000;
+  animation: reveal 600ms ease-in-out forwards 2s;
+}
+
+.bluesky img {
+  width: 100vw;
+}
+
+/* AND THAT WASN'T EVEN MY FINAL FORM! */
+
+.audio {
+  height: 100vh;
+  width: 100vw;
+
+  display: grid;
+  grid-template: repeat(5, 20vh) / 11vw 11svw 11vw 11vw 56vw;
+
+  overflow: hidden;
+  background: url("pictures/scenes/snowbound cropped.jpg") right;
+  background-size: cover;
+  animation: reveal2 2s; 
+}
+
+.audio li {
+  cursor: pointer;
+  overflow-wrap: break-word;
+  padding: 1vh 0.5vw 1vh 1.5vw;
+}
+
+@keyframes reveal2 {
+  0% {opacity: 0;}
+  70% {opacity: 0};
+  100% {opacity: 1;}
+}
+.audio ul {
+  color: black;
+  background: white;
+
+  font-size: 0.11rem;
+  width: 100%;
+
+  overflow: scroll;
+  box-shadow: -1px 2px 10px rgba(13, 12, 12, 0.6);
+}
+
+#memoList1 li {
+  animation: reveal2 5.5s; 
+}
+
+#memoList2 li {
+  animation: reveal2 3.5s; 
+}
+
+#memoList3 li {
+  animation: reveal2 4.5s; 
+}
+
+#memoList1 {
+  grid-area: 1 / 2 / -1 / 3;
+  justify-self: start;
+  margin: 2vh 0vw 3vh 0vw;
+
+}
+#memoList2 {
+  grid-area: 1 / 3 / 5 / 4;
+  margin: 3vw 2vw 1vw 2vw; 
+  padding-right: 2vh;
+}
+#memoList3 {
+  grid-area: 2 / 4 / -1 / 5;
+  margin: 0 0vw 11vh 1vw;
+}
+
+#currentFile {
+  grid-area: 2 / 5 / 3 / -1;
+  font-size: 0.33rem;
+
+  max-height: 30vh;
+  align-self: end;
+  justify-self: center;
+}
+
+#player {
+  grid-area: 3 / 5 / 4 / -1;
+
+  max-height: 15vh;
+  align-self: end;
+  justify-self: center;
+}
+
+.audio #random {
+  color: white;
+  grid-area: 4 / 5 / -1 / -1;
+  align-self: start;
+  justify-self: center;
+  
+  width: 12vw;
+  height: 8vh;
+  margin: 2vh 0vw 0vh 0vw;
+
+  font-size: 0.13rem;
+  border: 0px;
+  border-radius: 50%;
+
+  background: url("pictures/scenes/snowbound\ cropped.jpg") center;
+  background-size: cover;
+}
+
 /* THUMBNAILS (MINIMIZE ME LIKE THE IMPACT OF FOSSIL FUELS ON THE ENVIRONMENT) */
   #click {
   font-size: 0.14rem;
@@ -289,10 +417,17 @@ a:hover {
 
   cursor: pointer;
   z-index: 10;
-
   }
 
-  #click:hover, #click2:hover {
+  .audio #click2 {
+  width: 22%;
+
+  transform: rotateX(180deg) translateX(-80vw) translateY(90vh);
+  cursor: pointer;
+  border-radius: 50%;
+  }
+
+  #click:hover, #click2:hover, #click3:hover {
     opacity: 100%;
   } #one {
   background: url("videos/thumbnails/1.png") center;
@@ -414,7 +549,7 @@ a:hover {
   padding: 0.25rem 0.1rem 1.5rem 0.2rem;
 }
 
-#random {
+.journal #random {
     grid-area: 1 / 1 / -1 / 2;
     width: 20vw;
     height: 10vh;
@@ -426,4 +561,32 @@ a:hover {
     border-radius: 10px 100px;
     z-index: 5;
   }
+
+  /* OFFICE PARTY PLAYLIST QUERIES */
+.audio li, .audio ul {
+  display: none;
+}
+
+#currentFile {
+  grid-area: 2 / 1 / 3 / -1;
+  margin-bottom: 5vh;
+}
+
+#player {
+  grid-area: 3 / 1 / 4 / -1;
+  align-self: start;
+  margin-bottom: 5vh;
+}
+
+.audio #random {
+  grid-area: 3 / 1 / 5 / -1;
+  color: white;
+  align-self: center;
+  
+  width: 25vw;
+  height: 10vh;
+
+  background: url("pictures/scenes/snowbound\ cropped.jpg") top;
+  background-size: cover;
+}
 }

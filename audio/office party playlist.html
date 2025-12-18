@@ -1,0 +1,160 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../killswitch.css" rel="stylesheet">
+        <link href="../kiss.css" rel="stylesheet" >
+
+        <title>office party playlist</title>
+        <link rel="icon" href="../pictures/loading/cove.ico" type="image/x-icon">
+    </head>
+    <body>
+        <div class="bluesky">
+            <h1>(this leaves your past unchanged)</h1>
+        </div>
+
+      <div class="audio">
+        <button id="random">I'm feeling lucky.</button>
+        <audio id="player" type="audio/mp4" controls>test</audio>
+        <div id="currentFile">bupkis</div>
+
+        <ul id="memoList1"></ul>
+        <ul id="memoList2"></ul>
+        <ul id="memoList3"></ul>
+
+        <a href="../index.html" id="click2"></a>
+        </div>
+
+    </body>
+</html>
+
+<!-- VOICE MEMOS -->
+<script>
+const entries = ["a fine may morning in the merry month of june.mp3",
+"almost touching.mp3",
+"attorneys extraordinaire.mp3",
+"backwards tape.mp3",
+"bare minimum beach.mp3",
+"bob dylan returns.mp3",
+"brings hell with him where he goes.mp3",
+"callum’s song.mp3",
+"caterpillar.mp3",
+"crying shame.mp3",
+"elfen leid.mp3",
+"galen’s room ii.mp3",
+"galen’s room.mp3",
+"got it in one.mp3",
+"green goodbye (two hours later…).mp3",
+"headlights.mp3",
+"heinous angel, occupation: unemployed.mp3",
+"home to me.mp3",
+"i am an mp3.mp3",
+"i believe in love.mp3",
+"i can cry upon command.mp3",
+"i have no one.mp3",
+"if i survive the waking up from sleep.mp3",
+"if life should wash away from me.mp3",
+"indian summer.mp3",
+"insane toilet jams.mp3",
+"jesus, give me energy.mp3",
+"kissing at the mall.mp3",
+"kundalini yoga.mp3",
+"lemon:lime.mp3",
+"lenin:mccartney.mp3",
+"love is burning me alive i.mp3",
+"love is burning me alive ii.mp3",
+"love, no one talks about it.mp3",
+"map continues.mp3",
+"might have said it, only joking, i don’t mean it.mp3",
+"money, money, money.mp3",
+"moonlight swim.mp3",
+"morningstar.mp3",
+"move a little closer, honey.mp3",
+"move a little closer.mp3",
+"no, why was i born?.mp3",
+"not your usual break time.mp3",
+"on the water.mp3",
+"only beauty matters at all.mp3",
+"our new hr portal.mp3",
+"pal of mine.mp3",
+"providence backyard.mp3",
+"pyramids we cannot see.mp3",
+"read all about it.mp3",
+"rule brittania.mp3",
+"scituate, massachusetts.mp3",
+"see me in tremendous pain.mp3",
+"seven stars bakery.mp3",
+"shadow on the stair.mp3",
+"someone’s daughter.mp3",
+"something borrowed.mp3",
+"somewhere you will never age.mp3",
+"sooner or later.mp3",
+"steve martin sings.mp3",
+"stop tickling me.mp3",
+"sunday wedding in the rain.mp3",
+"ten excuses long.mp3",
+"the other side.mp3",
+"the pact is sealed.mp3",
+"the villain in the crow sings sunlight.mp3",
+"the world felt so wide.mp3",
+"there’s magic.mp3",
+"they never told you what you are?.mp3",
+"this christmas.mp3",
+"tiger lilies.mp3",
+"timberland.mp3",
+"tiny lapses of the light, lapsing of the light.mp3",
+"to stay above the rising water.mp3",
+"to the holy land.mp3",
+"turn me on dead man.mp3",
+"under the ice.mp3",
+"very long, sad time.mp3",
+"visions of the lord.mp3",
+"wait a minute.mp3",
+"weigh on your mind.mp3",
+"what am i on? drugs?.mp3",
+"when i was young, i was young.mp3",
+"where is the exit? (game show).mp3",
+"yes please.mp3",
+"your bicycle seat.mp3",
+"your father’s prison.mp3",
+"youtube girl original song.mp3"]
+
+const player = document.getElementById("player");
+const currenFile = document.getElementById("currentFile")
+
+document.getElementById("random").addEventListener("click", () => {
+  const index = Math.floor(Math.random() * entries.length);
+  player.src = entries[index];
+  player.play();
+  currentFile.textContent = entries[index];
+});
+
+const list1 = document.getElementById("memoList1");
+const list2 = document.getElementById("memoList2");
+const list3 = document.getElementById("memoList3");
+
+entries.forEach((file, index) => {
+  let targetList;
+
+  if (index < 33) {
+    targetList = list1;
+  } else if (index <60) {
+    targetList = list2;
+  } else {
+    targetList = list3;
+  }
+
+  const li = document.createElement("li");
+  li.textContent = file;
+
+  li.addEventListener("click", () => {
+    player.src = file;
+    player.play();
+    currentFile.textContent = entries[index];
+  });
+
+  targetList.appendChild(li);
+});
+
+</script>
+
