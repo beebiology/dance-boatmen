@@ -608,7 +608,16 @@ a:hover {
 }
 
 #currentFile {
-  font-size: 0.2rem;
-  text-align: center;
+  font-size: 0.25rem;
+  align-self: center;
+}
+
+#player {
+  align-self: end;
+}
+
+.audio #random {
+  margin: 6vh 0vw 0vh 0vw;
+  font-size: 0.08rem;
 }
 }
